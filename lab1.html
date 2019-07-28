@@ -8,13 +8,17 @@
 
 </head>
 <body>
-    <form>
-    Email:<input type="text" name="email">
-    Username:<input type="text" name="usernae">
-    Password<input type="password" name="password">
-    <input type="submit" name="submit" value="submit">
+  <form name="form" action="/lab1.html" onsubmit="return validate()" method="post">
+    
+        Email:<input type="text" name="email" id="Email" ><br>
+    
+        Username:<input type="text" name="username" id="txtUn"><br>
+    
+        Password:<input type="password" name="password" id="password"><br>
+    
+    
+        <input type="submit" name="submit" value='Submit' id="submit">
     </form>
-
-   <script type="text/javascript" src="script.js"></script> 
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
