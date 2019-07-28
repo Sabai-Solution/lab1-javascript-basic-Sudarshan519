@@ -1,26 +1,20 @@
-    function validaateEmptyValues(){
-    var txtEmail = document.getElementsByName(txtEmail) 
-    var txtUsername = document.getElementsByName(txtUsername)
-    var txtPassword = document.getElementById(txtPassword)
-    
-    var appendError="";
-    if(txtEmail==""){
-        if(appendError!="")
-        appendError="email";
-    }
-    if(txtUsername==""){
-        if(appendError!="")
-        appendError=appendError+" un ";
-    }
-    if(txtPassword==""){
-        if(appendError!="")
-        appendError=appendError+"password";
-    }
-    if(appendError!=""){
-        appendError=appendError+"cannot be empty";
-        return false;
-    }
-        else
-        return true;
-    
+    function validaate(){
+    var email = document.forms["form"]["email"].value;
+            var username=document.forms["form"]["username"].value;
+            var password=document.forms["form"]["password"].value;
+            if (email == "") {
+              alert("email must be filled out");
+              return false;
+            }
+            else
+
+            if(username==""){
+                alert("username must be filled");
+            }
+            else
+            if(password==""){
+                alert("password must be filled");
+            }
+            else{document.write("the form is valid");}
+          
 }
