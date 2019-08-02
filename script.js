@@ -1,20 +1,33 @@
     function validaate(){
-    var email = document.forms["form"]["email"].value;
-            var username=document.forms["form"]["username"].value;
-            var password=document.forms["form"]["password"].value;
-            if (email == "") {
-              alert("email must be filled out");
-              return false;
+var txtEmail = document.forms['form']['email'].value; 
+     var txtUsername = document.forms['form']['username'].value; 
+     var txtPassword = document.forms['form']['password'].value; 
+    
+     var appendError="";
+             if(txtEmail==""){
+                appendError="email";
+             }
+             if(txtUsername==""){
+                 if(appendError!="")
+                 appendError=appendError+" and "+"username";
+                 
+             }
+             if(txtPassword==""){
+                 if(appendError!="")
+                 appendError=appendError+" and "+"password";
+                 
+             }
+             if(appendError!=""){
+                appendError=appendError+" can not be empty.";
+                alert(appendError);
+                return false;
             }
-            else
+            else{
+                alert("The form is valid");
+            return true;
+            }
 
-            if(username==""){
-                alert("username must be filled");
-            }
-            else
-            if(password==""){
-                alert("password must be filled");
-            }
-            else{document.write("the form is valid");}
           
 }
+    
+
